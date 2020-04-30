@@ -2,7 +2,7 @@ var websocket = require('websocket-stream');
 
 function repeater(tape, opts) {
     var ip = opts.ip || 'localhost';
-    var port = opts.port || 8080;
+    var port = opts.port || '8080';
     var url = `ws://${ip}:${port}`;
 
     var wss = websocket(url);

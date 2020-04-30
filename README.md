@@ -38,7 +38,7 @@ change the listener URL to an ip address you want to listen from.
 ```js
 // require...
 
-repeater(test, { ip: 198.168.1.2 });
+repeater(test, { ip: '198.168.1.2' });
 ```
 
 start listener on machine @ 198.168.1.2
@@ -51,6 +51,6 @@ tape-repeater
 repeater(test, {options})
 ```
 * `options` is an object with the following optional properties:
-  + `ip: localhost` ip address of the listener or your own server.
-  + `port: 8080` port of the listener.
+  + `ip: 'localhost'` ip address of the listener or your own server.
+  + `port: '8080'` port of the listener.
   + `log: false` if repeater should also log tape output to the console.
