@@ -24,4 +24,4 @@ function print(line) {
     }
 }
 
-exports.repeater = repeater;
+module.exports = repeater;
