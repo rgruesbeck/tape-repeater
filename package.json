@@ -16,7 +16,7 @@
         "tap",
         "tape"
     ],
-    "author": "",
+    "author": "Ron Gruesbeck",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/rgruesbeck/tape-repeater/issues"
