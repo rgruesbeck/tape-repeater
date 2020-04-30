@@ -1,5 +1,5 @@
 # tape-repeater
-Stream [tape](https://github.com/substack/tape) output back to the terminal.
+Stream [tape](https://github.com/substack/tape) to the terminal from anywhere.
 
 ## example
 Setup `tape-repeater` as the TAP reporter in your browser code.
