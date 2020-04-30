@@ -7,8 +7,7 @@ Setup `tape-repeater` as the TAP reporter in your browser code.
 var test = require('tape');
 var repeater = require('tape-repeater');
 
-var listener = 'ws://localhost:8080';
-repeater(test, listener);
+repeater(test);
 
 // tests...
 ```
@@ -26,13 +25,20 @@ pipe the output of `tap-repeater` to a pretty reporter.
 tap-repeater | tap-difflet
 ```
 
+### print output in console
+set `options.log` to `true`
+```js
+// require...
+
+repeater(test, { log: true });
+```
+
 ### test/listen remotely
 change the listener URL to an ip address you want to listen from.
 ```js
 // require...
 
-var listener = 'ws://198.168.1.2:8080';
-repeater(test, listener);
+repeater(test, { ip: 198.168.1.2 });
 ```
 
 start listener on machine @ 198.168.1.2
@@ -40,3 +46,11 @@ start listener on machine @ 198.168.1.2
 tape-repeater
 ```
 
+## API
+```js 
+repeater(test, {options})
+```
+* `options` is an object with the following optional properties:
+  + `ip: localhost` ip address of the listener or your own server.
+  + `port: 8080` port of the listener.
+  + `log: false` if repeater should also log tape output to the console.

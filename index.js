@@ -1,6 +1,10 @@
 var websocket = require('websocket-stream');
 
-function repeater(tape, url) {
+function repeater(tape, opts) {
+    var ip = opts.ip || 'localhost';
+    var port = opts.port || 8080;
+    var url = `ws://${ip}:${port}`;
+
     var wss = websocket(url);
     var ts = tape.createStream({ objectMode: false });
 
@@ -10,11 +14,13 @@ function repeater(tape, url) {
         wss.write(data);
 
         // print test in console
-        print(data);
+        if (opts.log === true) {
+            log(data);
+        }
     })
 }
 
-function print(line) {
+function log(line) {
     if (/^ok/.test(line)) {
         console.log(`%c${line}`, `color:green`);
     } else if (/^not ok/.test(line)) {
