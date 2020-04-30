@@ -1,0 +1,31 @@
+{
+    "name": "tape-repeater",
+    "version": "1.0.0",
+    "description": "Stream tape reports back to a websocket server.",
+    "main": "index.js",
+    "bin": "./bin/index.js",
+    "scripts": {
+        "test": "tap test/*.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rgruesbeck/tape-repeater.git"
+    },
+    "keywords": [
+        "test",
+        "tap",
+        "tape"
+    ],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rgruesbeck/tape-repeater/issues"
+    },
+    "homepage": "https://github.com/rgruesbeck/tape-repeater#readme",
+    "dependencies": {
+        "websocket-stream": "^5.5.2"
+    },
+    "devDependencies": {
+        "tap": "^14.10.7"
+    }
+}
