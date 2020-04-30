@@ -1,7 +1,7 @@
 {
     "name": "tape-repeater",
     "version": "1.0.0",
-    "description": "Stream tape reports back to a websocket server.",
+    "description": "Stream tape output back to the terminal.",
     "main": "index.js",
     "bin": "./bin/index.js",
     "scripts": {
