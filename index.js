@@ -5,14 +5,22 @@ function repeater(tape, opts) {
     var port = opts.port || '8080';
     var url = `ws://${ip}:${port}`;
     var shouldLog = /true/.test(`${opts.log}`);
+    var shouldRepeat = /true/.test(`${opts.repeat}`);
 
-    var wss = websocket(url);
+    var wss;
     var ts = tape.createStream({ objectMode: false });
+
+    // create web socket
+    if (shouldRepeat) {
+        wss = websocket(url);
+    }
 
     // handle tap data
     ts.on('data', function(data) {
         // send test to server
-        wss.write(data);
+        if (shouldRepeat && wss) {
+            wss.write(data);
+        }
 
         // print test in console
         if (shouldLog) {
