@@ -52,5 +52,5 @@ repeater(test, {options})
 ```
 * `options` is an object with the following optional properties:
   + `ip: 'localhost'` ip address of the listener or your own server.
-  + `port: '8080'` port of the listener.
+  + `port: '9090'` port of the listener.
   + `log: false` if repeater should also log tape output to the console.

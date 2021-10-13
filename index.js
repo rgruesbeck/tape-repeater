@@ -2,7 +2,7 @@ var websocket = require('websocket-stream');
 
 function repeater(tape, opts) {
     var ip = opts.ip || 'localhost';
-    var port = opts.port || '8080';
+    var port = opts.port || '9090';
     var url = `ws://${ip}:${port}`;
     var shouldLog = /true/.test(`${opts.log}`);
     var shouldRepeat = /true/.test(`${opts.repeat}`);
@@ -40,3 +40,4 @@ function log(line) {
 }
 
 module.exports = repeater;
+
